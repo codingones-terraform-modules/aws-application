@@ -9,5 +9,8 @@ terraform {
     http = {
       source = "hashicorp/http"
     }
+    tfe = {
+      source = "hashicorp/tfe"
+    }
   }
 }

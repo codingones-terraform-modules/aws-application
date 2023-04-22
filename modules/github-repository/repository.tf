@@ -24,6 +24,7 @@ resource "github_branch_protection" "main_branch_protection" {
   require_signed_commits          = true
   required_linear_history         = true
   require_conversation_resolution = true
+  allows_force_pushes             = true
 
   depends_on = [github_branch_default.main]
 }

@@ -1,3 +1,8 @@
+variable "terraform_organization" {
+  description = "The terraform organization name"
+  nullable    = false
+  default     = false
+}
 
 variable "github_organization" {
   description = "The github organization name"
@@ -52,7 +57,6 @@ variable "about" {
 variable "s3_policy" {
   description = "The api deployer group policy that grants s3 sync and cache invalidation"
   nullable    = false
-  default     = false
 }
 
 variable "github_token" {

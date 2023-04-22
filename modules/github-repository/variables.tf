@@ -57,7 +57,16 @@ variable "s3_deployer_aws_secret_access_key" {
 variable "s3_deployer_aws_default_region" {
   description = "The s3 deployer region"
   nullable    = false
-  default     = false
+}
+
+variable "s3_deployer_s3_bucket" {
+  description = "The s3 bucket name"
+  nullable    = false
+}
+
+variable "s3_deployer_cloudfront_distribution_id" {
+  description = "The cloudfront distribution id"
+  nullable    = false
 }
 
 variable "github_token" {
