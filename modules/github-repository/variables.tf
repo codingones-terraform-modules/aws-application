@@ -59,14 +59,20 @@ variable "s3_deployer_aws_default_region" {
   nullable    = false
 }
 
-variable "s3_deployer_s3_bucket" {
-  description = "The s3 bucket name"
-  nullable    = false
-}
+#variable "s3_deployer_s3_bucket" {
+#  description = "The s3 bucket name"
+#  nullable    = false
+#}
+#
+#variable "s3_deployer_cloudfront_distribution_id" {
+#  description = "The cloudfront distribution id"
+#  nullable    = false
+#}
 
-variable "s3_deployer_cloudfront_distribution_id" {
-  description = "The cloudfront distribution id"
-  nullable    = false
+variable "project_environment_variables_for_client_release" {
+  description = "A map of GitHub variable keys to their corresponding values from Terraform"
+  type        = map(string)
+  nullable    = true
 }
 
 variable "github_token" {

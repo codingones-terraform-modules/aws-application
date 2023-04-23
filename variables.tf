@@ -59,6 +59,25 @@ variable "s3_policy" {
   nullable    = false
 }
 
+variable "terraform_variables_to_copy_in_github" {
+  type = list(object({
+    key_in_terraform_organization_public_variable_set = string
+    key_in_github_variables                           = string
+  }))
+  description = "An associative map of the terraform organization variables to expose publicly in the github client repository"
+  nullable    = true
+  default = [
+    {
+      key_in_terraform_organization_public_variable_set = "s3_deployer_s3_bucket"
+      key_in_github_variables                           = "AWS_S3_BUCKET"
+    },
+    {
+      key_in_terraform_organization_public_variable_set = "s3_deployer_cloudfront_distribution_id"
+      key_in_github_variables                           = "AWS_CLOUDFRONT_DISTRIBUTION_ID"
+    }
+  ]
+}
+
 variable "github_token" {
   description = "A github PAT with the right to push and commit on the api repository"
   nullable    = false
