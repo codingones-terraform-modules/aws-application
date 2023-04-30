@@ -4,7 +4,7 @@ data "github_organization" "organization" {
 
 resource "github_repository" "repository" {
   name                   = "client"
-  description            = "This is an angular client repository, it host the client files and necessary definition for s3 deployment"
+  description            = ""
   visibility             = "public"
   auto_init              = true
   delete_branch_on_merge = true
