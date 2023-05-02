@@ -4,7 +4,7 @@ data "github_organization" "organization" {
 
 resource "github_repository" "repository" {
   name                   = "client"
-  description            = ""
+  description            = "This repository host the files for a ready to deploy generic angular client"
   visibility             = "public"
   auto_init              = true
   delete_branch_on_merge = true
@@ -25,6 +25,4 @@ resource "github_branch_protection" "main_branch_protection" {
   required_linear_history         = true
   require_conversation_resolution = true
   allows_force_pushes             = true
-
-  depends_on = [github_branch_default.main]
 }

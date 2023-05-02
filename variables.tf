@@ -68,11 +68,11 @@ variable "terraform_variables_to_copy_in_github" {
   nullable    = true
   default = [
     {
-      key_in_terraform_organization_public_variable_set = "s3_deployer_s3_bucket"
+      key_in_terraform_organization_public_variable_set = "cloudfront_s3_bucket"
       key_in_github_variables                           = "AWS_S3_BUCKET"
     },
     {
-      key_in_terraform_organization_public_variable_set = "s3_deployer_cloudfront_distribution_id"
+      key_in_terraform_organization_public_variable_set = "cloudfront_distribution_id"
       key_in_github_variables                           = "AWS_CLOUDFRONT_DISTRIBUTION_ID"
     }
   ]
