@@ -22,10 +22,11 @@ variable "github_repository" {
   default     = false
 }
 
-variable "template_repository" {
-  description = "The repository which host the template to fork / sync"
+variable "template_repositories" {
+  type        = set(string)
+  description = "The repositories which host the template to fork / sync"
   nullable    = false
-  default     = false
+  default     = []
 }
 
 variable "commit_author" {

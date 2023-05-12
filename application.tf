@@ -12,15 +12,16 @@ module "aws_deployer" {
 }
 
 module "github_repository" {
-  source = "github.com/codingones-terraform-modules/github-repository-fork-and-rebase-template"
+  source = "github.com/codingones-terraform-modules/github-repository-merge-templates"
 
-  github_organization = var.github_organization
-  github_repository   = var.github_repository
-  project             = var.project
-  service             = var.service
-  commit_author       = var.commit_author
-  commit_email        = var.commit_email
-  topics              = var.github_repository_topics
+  github_organization   = var.github_organization
+  github_repository     = var.github_repository
+  project               = var.project
+  service               = var.service
+  commit_author         = var.commit_author
+  commit_email          = var.commit_email
+  topics                = var.github_repository_topics
+  template_repositories = var.template_repositories
 
   providers = {
     github = github

@@ -2,7 +2,7 @@
 
 ## About
 
-A module that aims to provide a ready to develop configuration of an angular client deployed to AWS through S3.
+A module that aims to provide a ready to develop configuration of an application deployed to AWS.
 
 ## TOC
 
