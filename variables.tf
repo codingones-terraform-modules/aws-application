@@ -23,7 +23,7 @@ variable "github_repository" {
 }
 
 variable "template_repositories" {
-  type        = set(string)
+  type        = list(string)
   description = "The repositories which host the template to fork / sync"
   nullable    = false
   default     = []
@@ -68,7 +68,7 @@ variable "github_token" {
 }
 
 variable "github_repository_topics" {
-  type        = set(string)
+  type        = list(string)
   description = "The topics present on the repository"
   nullable    = true
   default     = []

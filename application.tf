@@ -1,7 +1,7 @@
 module "aws_deployer" {
   source = "github.com/codingones-terraform-modules/aws-iam-deployer"
 
-  name                    = "${var.aws_organizational_unit}.${var.service}.s3"
+  name                    = "${var.aws_organizational_unit}.${var.service}"
   aws_organizational_unit = var.aws_organizational_unit
   service                 = var.service
   policy                  = var.policy
@@ -14,14 +14,14 @@ module "aws_deployer" {
 module "github_repository" {
   source = "github.com/codingones-terraform-modules/github-repository-merge-templates"
 
-  github_organization   = var.github_organization
-  github_repository     = var.github_repository
-  project               = var.project
-  service               = var.service
-  commit_author         = var.commit_author
-  commit_email          = var.commit_email
-  topics                = var.github_repository_topics
-  template_repositories = var.template_repositories
+  github_organization      = var.github_organization
+  github_repository        = var.github_repository
+  project                  = var.project
+  service                  = var.service
+  commit_author            = var.commit_author
+  commit_email             = var.commit_email
+  github_repository_topics = var.github_repository_topics
+  template_repositories    = var.template_repositories
 
   providers = {
     github = github
