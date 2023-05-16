@@ -60,13 +60,6 @@ variable "policy" {
   default     = false
 }
 
-variable "github_token" {
-  description = "Your GitHub Personal Access Token"
-  nullable    = false
-  default     = false
-  sensitive   = true
-}
-
 variable "github_repository_topics" {
   type        = list(string)
   description = "The topics present on the repository"

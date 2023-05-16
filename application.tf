@@ -44,11 +44,3 @@ resource "github_actions_secret" "api_deployer_access_key_secret" {
 
   depends_on = [module.aws_deployer, module.github_repository]
 }
-
-resource "github_actions_secret" "github_pat" {
-  secret_name     = "PAT"
-  repository      = var.github_repository
-  plaintext_value = var.github_token
-
-  depends_on = [module.aws_deployer, module.github_repository]
-}
