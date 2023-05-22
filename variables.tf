@@ -29,6 +29,13 @@ variable "template_repositories" {
   default     = []
 }
 
+variable "templated_files_variables" {
+  type        = map(string)
+  description = "The variables to replace in the forked template repository files"
+  nullable    = false
+  default     = {}
+}
+
 variable "commit_author" {
   description = "The commit author name for generated files"
   nullable    = true
@@ -65,4 +72,11 @@ variable "github_repository_topics" {
   description = "The topics present on the repository"
   nullable    = true
   default     = []
+}
+
+variable "allow_force_pushes_to_default_branch" {
+  type        = bool
+  description = "Allows to push directly on default branch, if false a PR is mandatory"
+  nullable    = true
+  default     = false
 }
