@@ -36,6 +36,12 @@ variable "templated_files_variables" {
   default     = {}
 }
 
+variable "template_fork" {
+  type        = bool
+  description = "If true will replace all repository content from template, this is a destructive operation"
+  nullable    = false
+}
+
 variable "commit_author" {
   description = "The commit author name for generated files"
   nullable    = true

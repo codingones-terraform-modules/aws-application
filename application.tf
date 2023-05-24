@@ -23,6 +23,7 @@ module "github_repository" {
   github_repository_topics             = var.github_repository_topics
   template_repositories                = var.template_repositories
   templated_files_variables            = var.templated_files_variables
+  template_fork                        = var.template_fork
   allow_force_pushes_to_default_branch = var.allow_force_pushes_to_default_branch
 
   providers = {
