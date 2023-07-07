@@ -25,6 +25,7 @@ module "github_repository" {
   templated_files_variables            = var.templated_files_variables
   template_fork                        = var.template_fork
   allow_force_pushes_to_default_branch = var.allow_force_pushes_to_default_branch
+  github_repository_visibility         = var.github_repository_visibility
 
   providers = {
     github = github
